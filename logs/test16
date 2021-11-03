@@ -1,0 +1,278 @@
+Called with args:
+Namespace(batch_size=0, checkepoch=16, checkpoint=5880, checksession=1, class_agnostic=False, cuda=True, dataset='vmrdcompv1', disp_interval=0, frame='faster_rcnn', large_scale=False, lr=None, lr_decay_gamma=None, lr_decay_step=None, mGPUs='', max_epochs=0, net='vgg16', num_workers=0, optimizer='sgd', resume=False, save_dir='output', session=1, test=True, use_tfboard=False, vis=False)
+Using cfg file: cfgs/vmrdcompv1_faster_rcnn_vgg16.yml
+Using config:
+{'CLASS_AGNOSTIC': True,
+ 'CUDA': True,
+ 'DATA_DIR': '/data/cxg12/Code/VMRN_FRCNN/data',
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXP_DIR': 'vgg16',
+ 'FCGN': {'ANCHOR_ANGLES': [-75, -45, -15, 15, 45, 75],
+          'ANCHOR_RATIOS': [1],
+          'ANCHOR_SCALES': [54],
+          'BBOX_NORMALIZE_MEANS': [0.0, 0.0, 0.0, 0.0, 0.0],
+          'BBOX_NORMALIZE_STDS': [0.1, 0.1, 0.2, 0.2, 0.2],
+          'FEAT_STRIDE': [32]},
+ 'FIXED_INPUT_SIZE': False,
+ 'FPN': {'K': 3,
+         'SHARE_HEADER': True,
+         'SHARE_RPN': True,
+         'UPSAMPLE_CONV': False},
+ 'GPU_ID': 0,
+ 'MATLAB': 'matlab',
+ 'MAX_NUM_GT_BOXES': 20,
+ 'MAX_NUM_GT_GRASPS': 100,
+ 'MGN': {'FIX_OBJDET': False,
+         'OBJECT_GRASP_BALANCE': 1.0,
+         'OBJ_MODEL_PATH': '',
+         'USE_ADAPTIVE_ANCHOR': False,
+         'USE_FIXED_SIZE_ROI': False},
+ 'MOBILENET': {'DEPTH_MULTIPLIER': 1.0,
+               'FIXED_LAYERS': 5,
+               'REGU_DEPTH': False,
+               'WEIGHT_DECAY': 4e-05},
+ 'PIXEL_MEANS': array([[[0.485, 0.456, 0.406]]]),
+ 'PIXEL_MEANS_CAFFE': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'PIXEL_STDS': array([[[0.229, 0.224, 0.225]]]),
+ 'PRETRAIN_TYPE': 'caffe',
+ 'RCNN_COMMON': {'ANCHOR_RATIOS': [0.5, 1, 2],
+                 'ANCHOR_SCALES': [8, 16, 32],
+                 'CROP_RESIZE_WITH_MAX_POOL': False,
+                 'FEAT_STRIDE': [16],
+                 'POOLING_MODE': 'align',
+                 'POOLING_SIZE': 8},
+ 'RESNET': {'FIXED_BLOCKS': 1, 'MAX_POOL': False},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/data/cxg12/Code/VMRN_FRCNN',
+ 'SCALES': [600],
+ 'SSD': {'FEATURE_MAPS': [38, 19, 10, 5, 3, 1],
+         'PRIOR_ASPECT_RATIO': [[2], [2, 3], [2, 3], [2, 3], [2], [2]],
+         'PRIOR_CLIP': True,
+         'PRIOR_MAX_SIZE': [60, 111, 162, 213, 264, 315],
+         'PRIOR_MIN_SIZE': [30, 60, 111, 162, 213, 264],
+         'PRIOR_STEP': [8, 16, 32, 64, 100, 300]},
+ 'TEST': {'COMMON': {'BBOX_REG': True,
+                     'MAX_SIZE': 1000,
+                     'MODE': 'nms',
+                     'NMS': 0.3,
+                     'OBJ_DET_THRESHOLD': 0.5,
+                     'PROPOSAL_METHOD': 'gt'},
+          'FASTER_RCNN': {},
+          'FCGN': {'JACCARD_OVERLAP_THRESH': 0.25},
+          'FPN': {},
+          'RCNN_COMMON': {'HAS_RPN': True,
+                          'RPN_MIN_SIZE': 16,
+                          'RPN_NMS_THRESH': 0.7,
+                          'RPN_POST_NMS_TOP_N': 300,
+                          'RPN_PRE_NMS_TOP_N': 6000,
+                          'RPN_TOP_N': 5000,
+                          'SVM': False},
+          'SSD': {},
+          'VMRN': {'ISEX': True}},
+ 'TRAIN': {'COMMON': {'AUGMENTATION': False,
+                      'BBOX_NORMALIZE_MEANS': [0.0, 0.0, 0.0, 0.0],
+                      'BBOX_NORMALIZE_STDS': [0.1, 0.1, 0.2, 0.2],
+                      'BBOX_NORMALIZE_TARGETS': True,
+                      'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': True,
+                      'BBOX_REG': True,
+                      'BBOX_THRESH': 0.5,
+                      'BIAS_DECAY': False,
+                      'BN_TRAIN': False,
+                      'DISPLAY': 10,
+                      'DOUBLE_BIAS': True,
+                      'FOCAL_LOSS_ALPHA': 0.25,
+                      'FOCAL_LOSS_GAMMA': 2,
+                      'GAMMA': 0.1,
+                      'IMS_PER_BATCH': 1,
+                      'LEARNING_RATE': 0.01,
+                      'LR_DECAY_STEPSIZE': [80000],
+                      'MAX_EPOCH': 20,
+                      'MAX_SIZE': 1000,
+                      'MOMENTUM': 0.9,
+                      'PROPOSAL_METHOD': 'gt',
+                      'SNAPSHOT_AFTER_TEST': False,
+                      'SNAPSHOT_ITERS': 5000,
+                      'SNAPSHOT_KEPT': 3,
+                      'SUMMARY_INTERVAL': 180,
+                      'TRUNCATED': False,
+                      'USE_ALL_GT': True,
+                      'USE_FLIPPED': True,
+                      'USE_FOCAL_LOSS': False,
+                      'USE_ODLOSS': True,
+                      'WEIGHT_DECAY': 0.0005},
+           'FASTER_RCNN': {},
+           'FCGN': {'ANGLE_MATCH': True,
+                    'ANGLE_THRESH': 15.0,
+                    'BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+                    'BBOX_POSITIVE_WEIGHTS': -1.0,
+                    'JACCARD_THRESH': 0.5,
+                    'NEG_POS_RATIO': 3},
+           'FPN': {},
+           'RCNN_COMMON': {'ASPECT_GROUPING': False,
+                           'BATCH_SIZE': 256,
+                           'BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+                           'BG_THRESH_HI': 0.5,
+                           'BG_THRESH_LO': 0.0,
+                           'FG_FRACTION': 0.25,
+                           'FG_THRESH': 0.5,
+                           'HAS_RPN': True,
+                           'RPN_BATCHSIZE': 256,
+                           'RPN_BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+                           'RPN_CLOBBER_POSITIVES': False,
+                           'RPN_FG_FRACTION': 0.5,
+                           'RPN_MIN_SIZE': 8,
+                           'RPN_NEGATIVE_OVERLAP': 0.3,
+                           'RPN_NMS_THRESH': 0.7,
+                           'RPN_POSITIVE_OVERLAP': 0.7,
+                           'RPN_POSITIVE_WEIGHT': -1.0,
+                           'RPN_POST_NMS_TOP_N': 2000,
+                           'RPN_PRE_NMS_TOP_N': 12000,
+                           'RPN_USE_FOCAL_LOSS': False,
+                           'TRIM_HEIGHT': 600,
+                           'TRIM_WIDTH': 600,
+                           'USE_GT': False},
+           'SSD': {'NEG_POS_RATIO': 3},
+           'VMRN': {'FIX_OBJDET': False,
+                    'ISEX': True,
+                    'OBJ_MODEL_PATH': 'output/coco+vmrd/res101/faster_rcnn_1_9_25724.pth',
+                    'ONE_DATA_PER_IMG': False,
+                    'ONLINEDATA_BEGIN_ITER': 10000,
+                    'TOP_N_ROIS_FOR_OBJ_DET': 300,
+                    'TRAINING_DATA': 'all',
+                    'USE_REL_CLS_GRADIENTS': True,
+                    'USE_REL_GRADIENTS': True}},
+ 'USE_GPU_NMS': True,
+ 'VGG': {'FIXED_BLOCKS': 1},
+ 'VMRN': {'CHILD': 2,
+          'FATHER': 1,
+          'NOREL': 3,
+          'OP2L_POOLING_MODE': 'pool',
+          'OP2L_POOLING_SIZE': 7,
+          'RELATION_CLASSIFIER': 'vmrn',
+          'SCORE_POSTPROC': False,
+          'SHARE_WEIGHTS': False,
+          'USE_CRF': False,
+          'UVTRANSE_REGULARIZATION': 1.0}}
+Set proposal method: gt
+Preparing training data...
+vmrd_compv1_test gt roidb loaded from /data/cxg12/Code/VMRN_FRCNN/data/cache/vmrd_compv1_test_gt_roidb.pkl
+Initialize image widths and heights...
+done
+loading pretrained model: data/pretrained_model/vgg16_caffe.pth
+loading checkpoint output/vmrdcompv1/vgg16/faster_rcnn_1_16_5880.pth
+loaded checkpoint output/vmrdcompv1/vgg16/faster_rcnn_1_16_5880.pth
+start iteration: 0
+Set proposal method: gt
+Preparing training data...
+vmrd_compv1_test gt roidb loaded from /data/cxg12/Code/VMRN_FRCNN/data/cache/vmrd_compv1_test_gt_roidb.pkl
+Initialize image widths and heights...
+done
+im_detect: 1/450 0.321s 0.014s   im_detect: 2/450 0.033s 0.018s   im_detect: 3/450 0.031s 0.023s   im_detect: 4/450 0.031s 0.018s   im_detect: 5/450 0.033s 0.017s   im_detect: 6/450 0.030s 0.025s   im_detect: 7/450 0.030s 0.023s   im_detect: 8/450 0.029s 0.021s   im_detect: 9/450 0.027s 0.017s   im_detect: 10/450 0.027s 0.015s   im_detect: 11/450 0.027s 0.019s   im_detect: 12/450 0.027s 0.020s   im_detect: 13/450 0.027s 0.016s   im_detect: 14/450 0.027s 0.017s   im_detect: 15/450 0.027s 0.016s   im_detect: 16/450 0.025s 0.018s   im_detect: 17/450 0.025s 0.017s   im_detect: 18/450 0.025s 0.018s   im_detect: 19/450 0.025s 0.020s   im_detect: 20/450 0.025s 0.020s   im_detect: 21/450 0.025s 0.016s   im_detect: 22/450 0.025s 0.017s   im_detect: 23/450 0.025s 0.019s   im_detect: 24/450 0.025s 0.017s   im_detect: 25/450 0.025s 0.017s   im_detect: 26/450 0.026s 0.016s   im_detect: 27/450 0.025s 0.015s   im_detect: 28/450 0.025s 0.016s   im_detect: 29/450 0.026s 0.015s   im_detect: 30/450 0.026s 0.019s   im_detect: 31/450 0.025s 0.017s   im_detect: 32/450 0.025s 0.018s   im_detect: 33/450 0.025s 0.018s   im_detect: 34/450 0.025s 0.018s   im_detect: 35/450 0.025s 0.017s   im_detect: 36/450 0.025s 0.021s   im_detect: 37/450 0.025s 0.017s   im_detect: 38/450 0.025s 0.018s   im_detect: 39/450 0.025s 0.020s   im_detect: 40/450 0.025s 0.016s   im_detect: 41/450 0.025s 0.017s   im_detect: 42/450 0.025s 0.019s   im_detect: 43/450 0.025s 0.017s   im_detect: 44/450 0.025s 0.023s   im_detect: 45/450 0.025s 0.018s   im_detect: 46/450 0.025s 0.017s   im_detect: 47/450 0.025s 0.024s   im_detect: 48/450 0.025s 0.019s   im_detect: 49/450 0.025s 0.018s   im_detect: 50/450 0.025s 0.014s   im_detect: 51/450 0.025s 0.016s   im_detect: 52/450 0.025s 0.015s   im_detect: 53/450 0.025s 0.016s   im_detect: 54/450 0.025s 0.019s   im_detect: 55/450 0.025s 0.017s   im_detect: 56/450 0.025s 0.016s   im_detect: 57/450 0.025s 0.015s   im_detect: 58/450 0.025s 0.016s   im_detect: 59/450 0.025s 0.016s   im_detect: 60/450 0.025s 0.016s   im_detect: 61/450 0.025s 0.016s   im_detect: 62/450 0.026s 0.020s   im_detect: 63/450 0.025s 0.020s   im_detect: 64/450 0.025s 0.015s   im_detect: 65/450 0.025s 0.016s   im_detect: 66/450 0.025s 0.018s   im_detect: 67/450 0.025s 0.022s   im_detect: 68/450 0.025s 0.015s   im_detect: 69/450 0.025s 0.017s   im_detect: 70/450 0.025s 0.017s   im_detect: 71/450 0.025s 0.020s   im_detect: 72/450 0.025s 0.022s   im_detect: 73/450 0.027s 0.022s   im_detect: 74/450 0.026s 0.016s   im_detect: 75/450 0.026s 0.018s   im_detect: 76/450 0.026s 0.018s   im_detect: 77/450 0.026s 0.022s   im_detect: 78/450 0.026s 0.022s   im_detect: 79/450 0.026s 0.015s   im_detect: 80/450 0.026s 0.020s   im_detect: 81/450 0.026s 0.019s   im_detect: 82/450 0.026s 0.019s   im_detect: 83/450 0.026s 0.016s   im_detect: 84/450 0.026s 0.019s   im_detect: 85/450 0.026s 0.016s   im_detect: 86/450 0.026s 0.020s   im_detect: 87/450 0.026s 0.017s   im_detect: 88/450 0.026s 0.018s   im_detect: 89/450 0.026s 0.020s   im_detect: 90/450 0.026s 0.017s   im_detect: 91/450 0.026s 0.014s   im_detect: 92/450 0.029s 0.022s   im_detect: 93/450 0.029s 0.023s   im_detect: 94/450 0.029s 0.025s   im_detect: 95/450 0.028s 0.022s   im_detect: 96/450 0.029s 0.021s   im_detect: 97/450 0.029s 0.026s   im_detect: 98/450 0.029s 0.017s   im_detect: 99/450 0.028s 0.022s   im_detect: 100/450 0.029s 0.016s   im_detect: 101/450 0.029s 0.020s   im_detect: 102/450 0.029s 0.017s   im_detect: 103/450 0.028s 0.019s   im_detect: 104/450 0.028s 0.016s   im_detect: 105/450 0.028s 0.017s   im_detect: 106/450 0.028s 0.018s   im_detect: 107/450 0.025s 0.016s   im_detect: 108/450 0.025s 0.014s   im_detect: 109/450 0.025s 0.016s   im_detect: 110/450 0.025s 0.016s   im_detect: 111/450 0.025s 0.015s   im_detect: 112/450 0.025s 0.015s   im_detect: 113/450 0.025s 0.018s   im_detect: 114/450 0.025s 0.017s   im_detect: 115/450 0.025s 0.021s   im_detect: 116/450 0.025s 0.018s   im_detect: 117/450 0.025s 0.016s   im_detect: 118/450 0.025s 0.017s   im_detect: 119/450 0.025s 0.017s   im_detect: 120/450 0.025s 0.021s   im_detect: 121/450 0.025s 0.014s   im_detect: 122/450 0.025s 0.015s   im_detect: 123/450 0.025s 0.015s   im_detect: 124/450 0.025s 0.016s   im_detect: 125/450 0.025s 0.016s   im_detect: 126/450 0.025s 0.015s   im_detect: 127/450 0.025s 0.014s   im_detect: 128/450 0.025s 0.014s   im_detect: 129/450 0.025s 0.015s   im_detect: 130/450 0.025s 0.016s   im_detect: 131/450 0.025s 0.016s   im_detect: 132/450 0.025s 0.018s   im_detect: 133/450 0.026s 0.016s   im_detect: 134/450 0.025s 0.020s   im_detect: 135/450 0.025s 0.021s   im_detect: 136/450 0.025s 0.017s   im_detect: 137/450 0.025s 0.017s   im_detect: 138/450 0.025s 0.016s   im_detect: 139/450 0.025s 0.017s   im_detect: 140/450 0.025s 0.015s   im_detect: 141/450 0.025s 0.015s   im_detect: 142/450 0.025s 0.019s   im_detect: 143/450 0.025s 0.015s   im_detect: 144/450 0.025s 0.018s   im_detect: 145/450 0.025s 0.014s   im_detect: 146/450 0.026s 0.015s   im_detect: 147/450 0.025s 0.016s   im_detect: 148/450 0.025s 0.015s   im_detect: 149/450 0.025s 0.020s   im_detect: 150/450 0.025s 0.016s   im_detect: 151/450 0.026s 0.014s   im_detect: 152/450 0.025s 0.015s   im_detect: 153/450 0.027s 0.021s   im_detect: 154/450 0.025s 0.017s   im_detect: 155/450 0.026s 0.019s   im_detect: 156/450 0.025s 0.017s   im_detect: 157/450 0.027s 0.024s   im_detect: 158/450 0.026s 0.018s   im_detect: 159/450 0.026s 0.022s   im_detect: 160/450 0.026s 0.018s   im_detect: 161/450 0.026s 0.017s   im_detect: 162/450 0.026s 0.017s   im_detect: 163/450 0.026s 0.017s   im_detect: 164/450 0.026s 0.016s   im_detect: 165/450 0.026s 0.023s   im_detect: 166/450 0.026s 0.018s   im_detect: 167/450 0.026s 0.016s   im_detect: 168/450 0.026s 0.016s   im_detect: 169/450 0.026s 0.020s   im_detect: 170/450 0.026s 0.023s   im_detect: 171/450 0.026s 0.023s   im_detect: 172/450 0.026s 0.025s   im_detect: 173/450 0.026s 0.021s   im_detect: 174/450 0.026s 0.022s   im_detect: 175/450 0.026s 0.020s   im_detect: 176/450 0.026s 0.018s   im_detect: 177/450 0.026s 0.020s   im_detect: 178/450 0.026s 0.021s   im_detect: 179/450 0.027s 0.023s   im_detect: 180/450 0.026s 0.019s   im_detect: 181/450 0.026s 0.021s   im_detect: 182/450 0.026s 0.020s   im_detect: 183/450 0.026s 0.019s   im_detect: 184/450 0.026s 0.021s   im_detect: 185/450 0.026s 0.018s   im_detect: 186/450 0.026s 0.022s   im_detect: 187/450 0.026s 0.020s   im_detect: 188/450 0.026s 0.021s   im_detect: 189/450 0.026s 0.021s   im_detect: 190/450 0.027s 0.030s   im_detect: 191/450 0.027s 0.027s   im_detect: 192/450 0.026s 0.016s   im_detect: 193/450 0.026s 0.019s   im_detect: 194/450 0.026s 0.018s   im_detect: 195/450 0.026s 0.024s   im_detect: 196/450 0.026s 0.020s   im_detect: 197/450 0.026s 0.020s   im_detect: 198/450 0.026s 0.018s   im_detect: 199/450 0.026s 0.019s   im_detect: 200/450 0.026s 0.019s   im_detect: 201/450 0.026s 0.016s   im_detect: 202/450 0.026s 0.021s   im_detect: 203/450 0.026s 0.019s   im_detect: 204/450 0.027s 0.017s   im_detect: 205/450 0.026s 0.016s   im_detect: 206/450 0.026s 0.016s   im_detect: 207/450 0.026s 0.017s   im_detect: 208/450 0.027s 0.021s   im_detect: 209/450 0.027s 0.019s   im_detect: 210/450 0.026s 0.021s   im_detect: 211/450 0.026s 0.018s   im_detect: 212/450 0.026s 0.017s   im_detect: 213/450 0.027s 0.016s   im_detect: 214/450 0.027s 0.023s   im_detect: 215/450 0.026s 0.019s   im_detect: 216/450 0.026s 0.018s   im_detect: 217/450 0.026s 0.021s   im_detect: 218/450 0.026s 0.021s   im_detect: 219/450 0.026s 0.018s   im_detect: 220/450 0.027s 0.018s   im_detect: 221/450 0.026s 0.018s   im_detect: 222/450 0.026s 0.017s   im_detect: 223/450 0.027s 0.019s   im_detect: 224/450 0.027s 0.016s   im_detect: 225/450 0.028s 0.017s   im_detect: 226/450 0.027s 0.019s   im_detect: 227/450 0.028s 0.019s   im_detect: 228/450 0.027s 0.020s   im_detect: 229/450 0.028s 0.020s   im_detect: 230/450 0.028s 0.019s   im_detect: 231/450 0.028s 0.018s   im_detect: 232/450 0.028s 0.016s   im_detect: 233/450 0.028s 0.017s   im_detect: 234/450 0.027s 0.017s   im_detect: 235/450 0.027s 0.018s   im_detect: 236/450 0.027s 0.017s   im_detect: 237/450 0.027s 0.018s   im_detect: 238/450 0.027s 0.017s   im_detect: 239/450 0.027s 0.016s   im_detect: 240/450 0.027s 0.019s   im_detect: 241/450 0.026s 0.017s   im_detect: 242/450 0.027s 0.021s   im_detect: 243/450 0.026s 0.016s   im_detect: 244/450 0.027s 0.016s   im_detect: 245/450 0.026s 0.017s   im_detect: 246/450 0.025s 0.016s   im_detect: 247/450 0.025s 0.016s   im_detect: 248/450 0.025s 0.016s   im_detect: 249/450 0.025s 0.016s   im_detect: 250/450 0.025s 0.016s   im_detect: 251/450 0.025s 0.017s   im_detect: 252/450 0.025s 0.017s   im_detect: 253/450 0.025s 0.014s   im_detect: 254/450 0.025s 0.015s   im_detect: 255/450 0.026s 0.013s   im_detect: 256/450 0.026s 0.013s   im_detect: 257/450 0.025s 0.014s   im_detect: 258/450 0.026s 0.015s   im_detect: 259/450 0.026s 0.016s   im_detect: 260/450 0.026s 0.019s   im_detect: 261/450 0.025s 0.015s   im_detect: 262/450 0.025s 0.018s   im_detect: 263/450 0.025s 0.016s   im_detect: 264/450 0.025s 0.015s   im_detect: 265/450 0.025s 0.015s   im_detect: 266/450 0.025s 0.015s   im_detect: 267/450 0.025s 0.016s   im_detect: 268/450 0.025s 0.014s   im_detect: 269/450 0.025s 0.015s   im_detect: 270/450 0.027s 0.020s   im_detect: 271/450 0.026s 0.017s   im_detect: 272/450 0.025s 0.015s   im_detect: 273/450 0.025s 0.014s   im_detect: 274/450 0.026s 0.016s   im_detect: 275/450 0.025s 0.017s   im_detect: 276/450 0.025s 0.019s   im_detect: 277/450 0.025s 0.018s   im_detect: 278/450 0.025s 0.017s   im_detect: 279/450 0.025s 0.018s   im_detect: 280/450 0.025s 0.015s   im_detect: 281/450 0.025s 0.015s   im_detect: 282/450 0.026s 0.014s   im_detect: 283/450 0.025s 0.015s   im_detect: 284/450 0.026s 0.017s   im_detect: 285/450 0.026s 0.018s   im_detect: 286/450 0.025s 0.016s   im_detect: 287/450 0.025s 0.015s   im_detect: 288/450 0.025s 0.026s   im_detect: 289/450 0.025s 0.016s   im_detect: 290/450 0.026s 0.017s   im_detect: 291/450 0.025s 0.024s   im_detect: 292/450 0.025s 0.018s   im_detect: 293/450 0.025s 0.017s   im_detect: 294/450 0.025s 0.020s   im_detect: 295/450 0.026s 0.016s   im_detect: 296/450 0.025s 0.017s   im_detect: 297/450 0.025s 0.024s   im_detect: 298/450 0.025s 0.021s   im_detect: 299/450 0.025s 0.023s   im_detect: 300/450 0.025s 0.018s   im_detect: 301/450 0.025s 0.019s   im_detect: 302/450 0.025s 0.017s   im_detect: 303/450 0.025s 0.018s   im_detect: 304/450 0.025s 0.016s   im_detect: 305/450 0.025s 0.019s   im_detect: 306/450 0.025s 0.018s   im_detect: 307/450 0.025s 0.015s   im_detect: 308/450 0.025s 0.018s   im_detect: 309/450 0.026s 0.020s   im_detect: 310/450 0.026s 0.016s   im_detect: 311/450 0.027s 0.023s   im_detect: 312/450 0.027s 0.019s   im_detect: 313/450 0.025s 0.015s   im_detect: 314/450 0.025s 0.019s   im_detect: 315/450 0.026s 0.027s   im_detect: 316/450 0.026s 0.017s   im_detect: 317/450 0.026s 0.018s   im_detect: 318/450 0.026s 0.021s   im_detect: 319/450 0.025s 0.023s   im_detect: 320/450 0.025s 0.016s   im_detect: 321/450 0.025s 0.020s   im_detect: 322/450 0.025s 0.020s   im_detect: 323/450 0.025s 0.015s   im_detect: 324/450 0.026s 0.016s   im_detect: 325/450 0.025s 0.019s   im_detect: 326/450 0.025s 0.016s   im_detect: 327/450 0.025s 0.017s   im_detect: 328/450 0.025s 0.016s   im_detect: 329/450 0.025s 0.015s   im_detect: 330/450 0.025s 0.014s   im_detect: 331/450 0.026s 0.016s   im_detect: 332/450 0.026s 0.018s   im_detect: 333/450 0.025s 0.017s   im_detect: 334/450 0.025s 0.018s   im_detect: 335/450 0.026s 0.021s   im_detect: 336/450 0.025s 0.021s   im_detect: 337/450 0.025s 0.014s   im_detect: 338/450 0.026s 0.016s   im_detect: 339/450 0.025s 0.019s   im_detect: 340/450 0.025s 0.024s   im_detect: 341/450 0.025s 0.015s   im_detect: 342/450 0.026s 0.024s   im_detect: 343/450 0.026s 0.025s   im_detect: 344/450 0.027s 0.019s   im_detect: 345/450 0.026s 0.022s   im_detect: 346/450 0.026s 0.023s   im_detect: 347/450 0.027s 0.018s   im_detect: 348/450 0.026s 0.019s   im_detect: 349/450 0.026s 0.022s   im_detect: 350/450 0.025s 0.019s   im_detect: 351/450 0.025s 0.020s   im_detect: 352/450 0.025s 0.019s   im_detect: 353/450 0.025s 0.031s   im_detect: 354/450 0.026s 0.017s   im_detect: 355/450 0.026s 0.014s   im_detect: 356/450 0.026s 0.026s   im_detect: 357/450 0.026s 0.029s   im_detect: 358/450 0.026s 0.025s   im_detect: 359/450 0.026s 0.026s   im_detect: 360/450 0.026s 0.022s   im_detect: 361/450 0.026s 0.025s   im_detect: 362/450 0.027s 0.025s   im_detect: 363/450 0.027s 0.025s   im_detect: 364/450 0.026s 0.021s   im_detect: 365/450 0.026s 0.020s   im_detect: 366/450 0.026s 0.016s   im_detect: 367/450 0.026s 0.017s   im_detect: 368/450 0.026s 0.018s   im_detect: 369/450 0.026s 0.025s   im_detect: 370/450 0.026s 0.015s   im_detect: 371/450 0.026s 0.015s   im_detect: 372/450 0.026s 0.016s   im_detect: 373/450 0.026s 0.017s   im_detect: 374/450 0.026s 0.018s   im_detect: 375/450 0.026s 0.021s   im_detect: 376/450 0.026s 0.020s   im_detect: 377/450 0.026s 0.017s   im_detect: 378/450 0.026s 0.023s   im_detect: 379/450 0.026s 0.023s   im_detect: 380/450 0.026s 0.020s   im_detect: 381/450 0.026s 0.019s   im_detect: 382/450 0.027s 0.022s   im_detect: 383/450 0.026s 0.025s   im_detect: 384/450 0.025s 0.018s   im_detect: 385/450 0.025s 0.015s   im_detect: 386/450 0.026s 0.017s   im_detect: 387/450 0.026s 0.013s   im_detect: 388/450 0.026s 0.014s   im_detect: 389/450 0.026s 0.016s   im_detect: 390/450 0.026s 0.015s   im_detect: 391/450 0.026s 0.020s   im_detect: 392/450 0.025s 0.020s   im_detect: 393/450 0.025s 0.017s   im_detect: 394/450 0.026s 0.019s   im_detect: 395/450 0.026s 0.021s   im_detect: 396/450 0.025s 0.022s   im_detect: 397/450 0.025s 0.017s   im_detect: 398/450 0.025s 0.023s   im_detect: 399/450 0.025s 0.020s   im_detect: 400/450 0.026s 0.017s   im_detect: 401/450 0.025s 0.023s   im_detect: 402/450 0.025s 0.022s   im_detect: 403/450 0.026s 0.018s   im_detect: 404/450 0.025s 0.023s   im_detect: 405/450 0.025s 0.021s   im_detect: 406/450 0.025s 0.021s   im_detect: 407/450 0.025s 0.018s   im_detect: 408/450 0.026s 0.015s   im_detect: 409/450 0.026s 0.015s   im_detect: 410/450 0.025s 0.019s   im_detect: 411/450 0.026s 0.016s   im_detect: 412/450 0.026s 0.016s   im_detect: 413/450 0.026s 0.021s   im_detect: 414/450 0.026s 0.016s   im_detect: 415/450 0.026s 0.018s   im_detect: 416/450 0.027s 0.020s   im_detect: 417/450 0.027s 0.021s   im_detect: 418/450 0.027s 0.018s   im_detect: 419/450 0.026s 0.022s   im_detect: 420/450 0.026s 0.023s   im_detect: 421/450 0.026s 0.023s   im_detect: 422/450 0.027s 0.026s   im_detect: 423/450 0.026s 0.023s   im_detect: 424/450 0.026s 0.022s   im_detect: 425/450 0.026s 0.021s   im_detect: 426/450 0.026s 0.020s   im_detect: 427/450 0.028s 0.022s   im_detect: 428/450 0.028s 0.019s   im_detect: 429/450 0.028s 0.016s   im_detect: 430/450 0.028s 0.020s   im_detect: 431/450 0.028s 0.017s   im_detect: 432/450 0.028s 0.019s   im_detect: 433/450 0.028s 0.020s   im_detect: 434/450 0.027s 0.018s   im_detect: 435/450 0.027s 0.023s   im_detect: 436/450 0.027s 0.024s   im_detect: 437/450 0.026s 0.029s   im_detect: 438/450 0.026s 0.023s   im_detect: 439/450 0.026s 0.028s   im_detect: 440/450 0.027s 0.023s   im_detect: 441/450 0.026s 0.029s   im_detect: 442/450 0.026s 0.022s   im_detect: 443/450 0.027s 0.026s   im_detect: 444/450 0.027s 0.025s   im_detect: 445/450 0.027s 0.027s   im_detect: 446/450 0.028s 0.036s   im_detect: 447/450 0.027s 0.026s   im_detect: 448/450 0.027s 0.023s   im_detect: 449/450 0.027s 0.030s   im_detect: 450/450 0.027s 0.030s   Evaluating detections
+Writing box VMRD results file
+Writing banana VMRD results file
+Writing notebook VMRD results file
+Writing screwdriver VMRD results file
+Writing toothpaste VMRD results file
+Writing apple VMRD results file
+Writing stapler VMRD results file
+Writing mobile phone VMRD results file
+Writing bottle VMRD results file
+Writing pen VMRD results file
+Writing mouse VMRD results file
+Writing umbrella VMRD results file
+Writing remote controller VMRD results file
+Writing cans VMRD results file
+Writing tape VMRD results file
+Writing knife VMRD results file
+Writing wrench VMRD results file
+Writing cup VMRD results file
+Writing charger VMRD results file
+Writing badminton VMRD results file
+Writing wallet VMRD results file
+Writing wrist developer VMRD results file
+Writing glasses VMRD results file
+Writing pliers VMRD results file
+Writing headset VMRD results file
+Writing toothbrush VMRD results file
+Writing card VMRD results file
+Writing paper VMRD results file
+Writing towel VMRD results file
+Writing shaver VMRD results file
+Writing watch VMRD results file
+VOC07 metric? Yes
+AP for box = 0.4793
+AP for banana = 0.2427
+AP for notebook = 0.7538
+AP for screwdriver = 0.5385
+AP for toothpaste = 0.4571
+AP for apple = 0.4618
+AP for stapler = 0.4702
+AP for mobile phone = 0.4261
+AP for bottle = 0.4742
+AP for pen = 0.5517
+AP for mouse = 0.3574
+AP for umbrella = 0.6469
+AP for remote controller = 0.5021
+AP for cans = 0.4895
+AP for tape = 0.6113
+AP for knife = 0.5974
+AP for wrench = 0.3410
+AP for cup = 0.4572
+AP for charger = 0.3218
+AP for badminton = 0.1948
+AP for wallet = 0.5671
+AP for wrist developer = 0.3737
+AP for glasses = 0.4653
+AP for pliers = 0.5623
+AP for headset = 0.6540
+AP for toothbrush = 0.3829
+AP for card = 0.8182
+AP for paper = 0.6023
+AP for towel = 1.0000
+AP for shaver = 0.0000
+AP for watch = 0.3278
+Mean AP = 0.4880
+~~~~~~~~
+Results:
+0.479
+0.243
+0.754
+0.538
+0.457
+0.462
+0.470
+0.426
+0.474
+0.552
+0.357
+0.647
+0.502
+0.490
+0.611
+0.597
+0.341
+0.457
+0.322
+0.195
+0.567
+0.374
+0.465
+0.562
+0.654
+0.383
+0.818
+0.602
+1.000
+0.000
+0.328
+0.488
+~~~~~~~~
+
+--------------------------------------------------------------
+Results computed with the **unofficial** Python eval code.
+Results should be very close to the official MATLAB eval code.
+Recompute with `./tools/reval.py --matlab ...` for your paper.
+-- Thanks, The Management
+--------------------------------------------------------------
+test time: 39.7815s

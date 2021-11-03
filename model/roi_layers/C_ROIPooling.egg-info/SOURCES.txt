@@ -1,0 +1,7 @@
+setup.py
+/data/cxg12/Code/VMRN_FRCNN/model/roi_layers/vision.cpp
+/data/cxg12/Code/VMRN_FRCNN/model/roi_layers/cpu/ROIAlign_cpu.cpp
+C_ROIPooling.egg-info/PKG-INFO
+C_ROIPooling.egg-info/SOURCES.txt
+C_ROIPooling.egg-info/dependency_links.txt
+C_ROIPooling.egg-info/top_level.txt
